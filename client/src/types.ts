@@ -72,10 +72,11 @@ export const Tool = {
   picture: "picture",
   erase: "erase",
 };
+export type ToolType = (typeof Tool)[keyof typeof Tool];
 
 export type Element = {
   id: string,
-  type: (typeof Tool)[keyof typeof Tool],
+  type: ToolType,
   point_1: Point,
   point_2: Point,
   opacity?: number,
